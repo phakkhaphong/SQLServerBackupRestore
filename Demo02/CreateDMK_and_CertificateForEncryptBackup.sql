@@ -1,0 +1,22 @@
+USE master;
+GO
+
+--CREATE DMK
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'fhfhhhUIO&*&hjk908';
+GO
+
+
+
+-- Create a server certificate
+CREATE CERTIFICATE BACKUP_Cert WITH SUBJECT = 'Backup certificate';
+GO
+
+
+BACKUP CERTIFICATE BACKUP_Cert
+TO FILE= 'D:\CERT\BACKUP_Cert.bak'
+WITH PRIVATE KEY 
+(
+    FILE='D:\CERT\BACKUP_Cert_pk.bak',
+    ENCRYPTION BY PASSWORD='*R8vkULA5aKhp3ekGg1o3'
+);
+GO
