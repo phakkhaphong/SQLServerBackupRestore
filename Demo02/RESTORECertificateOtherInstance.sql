@@ -1,0 +1,14 @@
+--RESTORE Certificate on other Instance
+
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'fhgjhfghgjkhg^&*%&^7889';
+GO
+
+
+CREATE CERTIFICATE BACKUP_cert 
+FROM FILE='D:\CERT\BACKUP_Cert.bak'
+WITH PRIVATE KEY 
+(
+    FILE='D:\CERT\BACKUP_Cert_pk.bak',
+    DECRYPTION BY PASSWORD='*R8vkULA5aKhp3ekGg1o3'
+);
+GO
